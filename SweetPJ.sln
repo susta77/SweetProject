@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SweetApi", "SweetApi\SweetApi.csproj", "{A1EA6802-5B30-4A19-A489-7478E61B7275}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1EA6802-5B30-4A19-A489-7478E61B7275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1EA6802-5B30-4A19-A489-7478E61B7275}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1EA6802-5B30-4A19-A489-7478E61B7275}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1EA6802-5B30-4A19-A489-7478E61B7275}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BCF482E-8CAF-46C4-8ECB-9F4782726173}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://mil-k.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SweetApi\\SweetApi.csproj
+		SccProjectName1 = SweetApi
+		SccLocalPath1 = SweetApi
+	EndGlobalSection
+EndGlobal

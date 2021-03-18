@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand text-warning" routerLink="/">
+    SweetProject
+  </a>
+  <button class="navbar-toggler" (click)="collapse=!collapse" type="button" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse" [hidden]="collapse">
+    <ul class="navbar-nav mr-auto" (click)="collapse=true">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['vetrina']" routerLinkActive="active">Vetrina</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['bakoffice']" [style.visibility]="isHidden? 'hidden': 'visible'" routerLinkActive="active">BackOffice</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto" *ngIf="currentUser">
+      <li class="nav-item dropdown">
+        <a class="nav-link" routerLink="/"  (click)="signOut()" routerLinkActive="active">Sign Out</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto" *ngIf="!currentUser" (click)="collapse=true">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login" routerLinkActive="active">Sign In</a>
+      </li>
+    </ul>
+   
+  </div>
+</nav>

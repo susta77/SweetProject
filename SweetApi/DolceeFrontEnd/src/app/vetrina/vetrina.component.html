@@ -1,0 +1,66 @@
+<div class="container">
+  <router-outlet></router-outlet>
+  <nav class="navbar navbar-expand-lg navbar-nav">
+
+    <div class="modal">
+      <div class="center">
+        <div class="row">
+          <div class="container">
+            <a cdkOverlayOrigin #trigger="cdkOverlayOrigin"></a>
+            <ng-template cdkConnectedOverlay
+                         [cdkConnectedOverlayOrigin]="trigger"
+                         [cdkConnectedOverlayOpen]="isOpen"
+                         (backdropClick)="isOpen = false">
+              <ul *ngFor="let ingr of ingredienti" class="overlay-list">
+                <li>{{ingr.nomeIngrediente}}</li>
+                <li>{{ingr.quntita}}</li>
+                <li>{{ingr.descrizione}}</li>
+              </ul>
+              <div class="overlay-list">
+                <button type="submit" (click)="isOpen = false" class="btn btn-dark">Close</button>
+              </div>
+            </ng-template>
+          
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <div *ngIf="isVetrinaShown" class="row container-fluid" id="divVetrina">
+    <form>
+      <div class="container">
+
+
+        <h3>In Vendita</h3>
+        <table class="table table-striped">
+          <tr>
+            <td class="font-weight-bold">Nome</td>
+            <!--<td>Descrizione</td>-->
+            <td class="font-weight-bold">Prezzo</td>
+            <td class="font-weight-bold">Stato</td>
+            <td class="font-weight-bold">Data</td>
+            <td ></td>
+
+          </tr>
+
+          <tr *ngFor="let d of data">
+            <td>{{d.nome}}</td>
+            <!--<td>{{d.descrizione}}</td>-->
+            <td>{{d.prezzo}}</td>
+            <td>{{d.stato}}</td>
+            <td>{{d.data}}</td>
+            <td><a (click)="isOpen = true" (mousedown)="getIngredienti(d.fk_Dolce)" class="btn btn-warning">Ingredienti</a></td>
+          </tr>
+
+
+        </table>
+      </div>
+    </form>
+  </div>
+</div>
+

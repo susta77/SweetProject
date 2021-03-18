@@ -1,0 +1,57 @@
+<div *ngIf="currentUser">
+ 
+  <div class="row container-fluid" id="divVetrina">
+    <form [formGroup]="EmpForm">
+      <div class="mt-xl-4"></div>
+      <div class="container">
+        <h3>Inserimento Dolci</h3>
+
+        <div class="row">
+
+          <select class="custom-select" (change)="changeDolce($event)">
+            <option value="">Scegli Dolce</option>
+            <option *ngFor="let d of dolce" [ngValue]="p">{{d.nome + "-" + d.pk_Dolce}}</option>
+          </select>
+
+
+
+        </div>
+        <div class="mt-xl-4"></div>
+        <div class="row">
+          <a (click)="aggiungiVetrina()" class="btn btn-warning">Inserisci</a>
+        </div>
+        <div class="mt-xl-4"></div>
+        <h3>Lista Dolci Vetrina</h3>
+        <div class="mt-xl-4"></div>
+        <div class="row">
+          <table class="table table-striped">
+            <tr>
+              <!-- <td>Id</td>-->
+              <td>Nome</td>
+              <td>Descrizione</td>
+              <td>Prezzo</td>
+              <td>Stato</td>
+              <td>Data</td>
+
+            </tr>
+
+            <tr *ngFor="let d of data">
+
+              <!-- <td>{{d.pk_Vetrina}}</td>-->
+              <td>{{d.nome}}</td>
+              <td>{{d.descrizione}}</td>
+              <td>{{d.prezzo}}</td>
+              <td>{{d.stato}}</td>
+              <td>{{d.data}}</td>
+
+
+            </tr>
+
+
+          </table>
+          <div class="mt-xl-4"></div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
